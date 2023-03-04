@@ -1,0 +1,29 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: var(--max-width);
+	margin: var(--center-content);
+	padding: 1rem;
+}
+
+.logo {
+	font-size: var(--font-size-s);
+}
+
+.nav ul {
+	display: flex;
+	flex-direction: row;
+	column-gap: 1rem;
+}
+
+.nav li {
+	list-style-type: none;
+}
+
+.nav a {
+	text-decoration: none;
+	color: inherit;
+}

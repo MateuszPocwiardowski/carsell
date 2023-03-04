@@ -1,0 +1,137 @@
+[
+	{
+		"category": "cars",
+		"brand": "Toyota",
+		"model": "Camry",
+		"generation": "XV50",
+		"price": 25000,
+		"year": 2018,
+		"fuel_type": "Gasoline",
+		"course": 35000,
+		"images": [
+			"https://example.com/images/toyota-camry-front.jpg",
+			"https://example.com/images/toyota-camry-side.jpg",
+			"https://example.com/images/toyota-camry-back.jpg"
+		]
+	},
+	{
+		"category": "motorcycles and scooters",
+		"brand": "Honda",
+		"model": "CBR1000RR-R",
+		"generation": "Fireblade SP",
+		"price": 20000,
+		"year": 2022,
+		"fuel_type": "Gasoline",
+		"course": 0,
+		"images": [
+			"https://example.com/images/honda-cbr1000rrr-front.jpg",
+			"https://example.com/images/honda-cbr1000rrr-side.jpg",
+			"https://example.com/images/honda-cbr1000rrr-back.jpg"
+		]
+	},
+	{
+		"category": "trucks",
+		"brand": "Ford",
+		"model": "F-150",
+		"generation": "Thirteenth generation",
+		"price": 40000,
+		"year": 2021,
+		"fuel_type": "Gasoline",
+		"course": 5000,
+		"images": [
+			"https://example.com/images/ford-f150-front.jpg",
+			"https://example.com/images/ford-f150-side.jpg",
+			"https://example.com/images/ford-f150-back.jpg"
+		]
+	},
+	{
+		"category": "cars",
+		"brand": "Mercedes-Benz",
+		"model": "C-Class",
+		"generation": "W205",
+		"price": 35000,
+		"year": 2019,
+		"fuel_type": "Gasoline",
+		"course": 45000,
+		"images": [
+			"https://example.com/images/mercedes-c-class-front.jpg",
+			"https://example.com/images/mercedes-c-class-side.jpg",
+			"https://example.com/images/mercedes-c-class-back.jpg"
+		]
+	},
+	{
+		"category": "motorcycles and scooters",
+		"brand": "Yamaha",
+		"model": "YZF-R6",
+		"generation": "Third generation",
+		"price": 8000,
+		"year": 2006,
+		"fuel_type": "Gasoline",
+		"course": 20000,
+		"images": [
+			"https://example.com/images/yamaha-r6-front.jpg",
+			"https://example.com/images/yamaha-r6-side.jpg",
+			"https://example.com/images/yamaha-r6-back.jpg"
+		]
+	},
+	{
+		"category": "trucks",
+		"brand": "Chevrolet",
+		"model": "Silverado",
+		"generation": "Fourth generation",
+		"price": 38000,
+		"year": 2019,
+		"fuel_type": "Diesel",
+		"course": 3000,
+		"images": [
+			"https://example.com/images/chevy-silverado-front.jpg",
+			"https://example.com/images/chevy-silverado-side.jpg",
+			"https://example.com/images/chevy-silverado-back.jpg"
+		]
+	},
+	{
+		"category": "cars",
+		"brand": "BMW",
+		"model": "3 Series",
+		"generation": "G20",
+		"price": 45000,
+		"year": 2021,
+		"fuel_type": "Electric",
+		"course": 10000,
+		"images": [
+			"https://example.com/images/bmw-3series-front.jpg",
+			"https://example.com/images/bmw-3series-side.jpg",
+			"https://example.com/images/bmw-3series-back.jpg"
+		]
+	},
+	{
+		"category": "motorcycles and scooters",
+		"brand": "Harley-Davidson",
+		"model": "Street Glide",
+		"generation": "Eighth generation",
+		"price": 28000,
+		"year": 2020,
+		"fuel_type": "Gasoline",
+		"course": 8000,
+		"images": [
+			"https://example.com/images/harley-streetglide-front.jpg",
+			"https://example.com/images/harley-streetglide-side.jpg",
+			"https://example.com/images/harley-streetglide-back.jpg"
+		]
+	},
+	{
+		"category": "trucks",
+		"brand": "Dodge",
+		"model": "Ram",
+		"generation": "Fourth generation",
+		"price": 42000,
+		"year": 2020,
+		"fuel_type": "Gasoline",
+		"course": 15000,
+		"images": [
+			"https://example.com/images/dodge-ram-front.jpg",
+			"https://example.com/images/dodge-ram-side.jpg",
+			"https://example.com/images/dodge-ram-back.jpg"
+		]
+	}
+]
