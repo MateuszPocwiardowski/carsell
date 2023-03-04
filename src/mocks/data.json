@@ -1,137 +1,156 @@
 [
 	{
+		"id": 1,
 		"category": "cars",
 		"brand": "Toyota",
 		"model": "Camry",
 		"generation": "XV50",
-		"price": 25000,
+		"price": 22000,
 		"year": 2018,
 		"fuel_type": "Gasoline",
-		"course": 35000,
+		"course": 30000,
 		"images": [
 			"https://example.com/images/toyota-camry-front.jpg",
 			"https://example.com/images/toyota-camry-side.jpg",
 			"https://example.com/images/toyota-camry-back.jpg"
-		]
+		],
+		"description": "Toyota Camry XV50 (2018) - This Toyota Camry is a reliable and affordable mid-size sedan that is perfect for daily driving. It is equipped with a fuel-efficient gasoline engine and has only 30,000 miles on the odometer, which means that it still has plenty of life left. The Camry has a spacious interior, comfortable seats, and plenty of features to make your driving experience more enjoyable. It also has a sleek and modern exterior design that is sure to turn heads. If you're looking for a reliable and affordable car that will last for years to come, then this Toyota Camry is a great option."
 	},
 	{
+		"id": 2,
 		"category": "motorcycles and scooters",
 		"brand": "Honda",
-		"model": "CBR1000RR-R",
-		"generation": "Fireblade SP",
-		"price": 20000,
-		"year": 2022,
+		"model": "CBR1000RR",
+		"generation": "Tenth generation",
+		"price": 12000,
+		"year": 2019,
 		"fuel_type": "Gasoline",
-		"course": 0,
+		"course": 5000,
 		"images": [
-			"https://example.com/images/honda-cbr1000rrr-front.jpg",
-			"https://example.com/images/honda-cbr1000rrr-side.jpg",
-			"https://example.com/images/honda-cbr1000rrr-back.jpg"
-		]
+			"https://example.com/images/honda-cbr1000rr-front.jpg",
+			"https://example.com/images/honda-cbr1000rr-side.jpg",
+			"https://example.com/images/honda-cbr1000rr-back.jpg"
+		],
+		"description": "Honda CBR1000RR Tenth generation (2019) - This Honda CBR1000RR is a high-performance motorcycle that is perfect for adrenaline junkies and speed enthusiasts. It has only 5,000 miles on the odometer, which means that it is practically new, and it is equipped with a powerful gasoline engine that delivers plenty of power. The CBR1000RR has a sleek and modern design that is sure to turn heads, and it comes with a variety of features to make your riding experience more enjoyable. If you're looking for a high-performance motorcycle that will give you an adrenaline rush every time you ride, then this Honda CBR1000RR is the perfect choice."
 	},
 	{
+		"id": 3,
 		"category": "trucks",
 		"brand": "Ford",
 		"model": "F-150",
 		"generation": "Thirteenth generation",
-		"price": 40000,
+		"price": 38000,
 		"year": 2021,
 		"fuel_type": "Gasoline",
-		"course": 5000,
+		"course": 10000,
 		"images": [
 			"https://example.com/images/ford-f150-front.jpg",
 			"https://example.com/images/ford-f150-side.jpg",
 			"https://example.com/images/ford-f150-back.jpg"
-		]
+		],
+		"description": "Ford F-150 Thirteenth generation (2021) - This Ford F-150 is a versatile and powerful pickup truck that is perfect for anyone who needs a reliable and capable vehicle for work or play. It has only 10,000 miles on the odometer, so it is practically new, and it is equipped with a powerful gasoline engine that delivers plenty of power and torque. The F-150 has a spacious and comfortable interior, and it comes with a variety of features to make your driving experience more enjoyable. It also has a rugged and stylish exterior design that is sure to turn heads. If you're in the market for a powerful and capable pickup truck, then this Ford F-150 is definitely worth considering."
 	},
 	{
+		"id": 4,
+		"category": "cars",
+		"brand": "Honda",
+		"model": "Accord",
+		"generation": "Tenth generation",
+		"price": 25000,
+		"year": 2020,
+		"fuel_type": "Gasoline",
+		"course": 8000,
+		"images": [
+			"https://example.com/images/honda-accord-front.jpg",
+			"https://example.com/images/honda-accord-side.jpg",
+			"https://example.com/images/honda-accord-back.jpg"
+		],
+		"description": "Honda Accord 10th generation (2020) - This Honda Accord is a sleek and modern mid-size sedan that is perfect for anyone who wants a car that is both practical and stylish. It has only 8,000 miles on the odometer, so it is practically new, and it is equipped with a fuel-efficient gasoline engine that provides plenty of power. The Accord has a spacious interior with comfortable seats, and it comes with plenty of features to make your driving experience more enjoyable. It also has a modern exterior design that is sure to turn heads. If you're in the market for a mid-size sedan, then this Honda Accord is definitely worth considering."
+	},
+	{
+		"id": 5,
+		"category": "motorcycles and scooters",
+		"brand": "Kawasaki",
+		"model": "Ninja ZX-10R",
+		"generation": "Sixth generation",
+		"price": 11000,
+		"year": 2019,
+		"fuel_type": "Gasoline",
+		"course": 6000,
+		"images": [
+			"https://example.com/images/kawasaki-zx10r-front.jpg",
+			"https://example.com/images/kawasaki-zx10r-side.jpg",
+			"https://example.com/images/kawasaki-zx10r-back.jpg"
+		],
+		"description": "Kawasaki Ninja ZX-10R Sixth generation (2019) - This Kawasaki Ninja ZX-10R is a high-performance motorcycle that is perfect for anyone who wants to experience the thrill of speed and power. It has only 6,000 miles on the odometer, so it is practically new, and it is equipped with a powerful gasoline engine that delivers plenty of power and torque. The ZX-10R has a sleek and modern design that is sure to turn heads, and it comes with a variety of features to make your riding experience more enjoyable. If you're looking for a high-performance motorcycle that will give you an adrenaline rush every time you ride, then this Kawasaki Ninja ZX-10R is the perfect choice."
+	},
+	{
+		"id": 6,
 		"category": "cars",
 		"brand": "Mercedes-Benz",
 		"model": "C-Class",
 		"generation": "W205",
 		"price": 35000,
 		"year": 2019,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 45000,
 		"images": [
 			"https://example.com/images/mercedes-c-class-front.jpg",
 			"https://example.com/images/mercedes-c-class-side.jpg",
 			"https://example.com/images/mercedes-c-class-back.jpg"
-		]
+		],
+		"description": "Mercedes-Benz C-Class (W205) (2019) - This Mercedes-Benz C-Class is a stylish and luxurious sedan that offers a comfortable and smooth ride. It has been well-maintained and has 45,000 miles on the odometer, and is equipped with a powerful and efficient gasoline engine. The C-Class has a spacious and well-appointed interior with comfortable seats, and it comes with a variety of features and amenities to make your driving experience more enjoyable. It also has a sleek and modern exterior design that is sure to impress. If you're looking for a luxurious and practical sedan, this Mercedes-Benz C-Class is definitely worth considering."
 	},
 	{
+		"id": 7,
 		"category": "motorcycles and scooters",
 		"brand": "Yamaha",
 		"model": "YZF-R6",
 		"generation": "Third generation",
 		"price": 8000,
 		"year": 2006,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 20000,
 		"images": [
 			"https://example.com/images/yamaha-r6-front.jpg",
 			"https://example.com/images/yamaha-r6-side.jpg",
 			"https://example.com/images/yamaha-r6-back.jpg"
-		]
+		],
+		"description": "Yamaha YZF-R6 Third generation - This Yamaha YZF-R6 is a high-performance motorcycle that is perfect for anyone who wants to experience the thrill of speed and power. It is equipped with a powerful gasoline engine that delivers plenty of power and torque, and it has a sleek and modern design that is sure to turn heads. The YZF-R6 has a variety of features to make your riding experience more enjoyable, and it is built with the latest technology to ensure that it is as safe and reliable as possible. If you're looking for a high-performance motorcycle that will give you an adrenaline rush every time you ride, then this Yamaha YZF-R6 is the perfect choice."
 	},
 	{
+		"id": 8,
 		"category": "trucks",
 		"brand": "Chevrolet",
-		"model": "Silverado",
+		"model": "Silverado 1500",
 		"generation": "Fourth generation",
-		"price": 38000,
-		"year": 2019,
-		"fuel_type": "Diesel",
-		"course": 3000,
-		"images": [
-			"https://example.com/images/chevy-silverado-front.jpg",
-			"https://example.com/images/chevy-silverado-side.jpg",
-			"https://example.com/images/chevy-silverado-back.jpg"
-		]
-	},
-	{
-		"category": "cars",
-		"brand": "BMW",
-		"model": "3 Series",
-		"generation": "G20",
 		"price": 45000,
 		"year": 2021,
-		"fuel_type": "Electric",
-		"course": 10000,
-		"images": [
-			"https://example.com/images/bmw-3series-front.jpg",
-			"https://example.com/images/bmw-3series-side.jpg",
-			"https://example.com/images/bmw-3series-back.jpg"
-		]
-	},
-	{
-		"category": "motorcycles and scooters",
-		"brand": "Harley-Davidson",
-		"model": "Street Glide",
-		"generation": "Eighth generation",
-		"price": 28000,
-		"year": 2020,
 		"fuel_type": "Gasoline",
-		"course": 8000,
+		"course": 12000,
 		"images": [
-			"https://example.com/images/harley-streetglide-front.jpg",
-			"https://example.com/images/harley-streetglide-side.jpg",
-			"https://example.com/images/harley-streetglide-back.jpg"
-		]
+			"https://example.com/images/chevrolet-silverado1500-front.jpg",
+			"https://example.com/images/chevrolet-silverado1500-side.jpg",
+			"https://example.com/images/chevrolet-silverado1500-back.jpg"
+		],
+		"description": "Chevrolet Silverado 1500 Fourth generation (2021) - This Chevrolet Silverado 1500 is a powerful and versatile pickup truck that is perfect for anyone who needs a reliable and capable vehicle for work or play. It has only 12,000 miles on the odometer, so it is practically new, and it is equipped with a powerful gasoline engine that delivers plenty of power and torque. The Silverado 1500 has a spacious and comfortable interior, and it comes with a variety of features to make your driving experience more enjoyable. It also has a rugged and stylish exterior design that is sure to turn heads. If you're in the market for a powerful and capable pickup truck, then this Chevrolet Silverado 1500 is definitely worth considering."
 	},
+
 	{
-		"category": "trucks",
-		"brand": "Dodge",
-		"model": "Ram",
-		"generation": "Fourth generation",
+		"id": 9,
+		"category": "cars",
+		"brand": "Tesla",
+		"model": "Model 3",
+		"generation": "First generation",
 		"price": 42000,
-		"year": 2020,
-		"fuel_type": "Gasoline",
+		"year": 2019,
+		"fuel_type": "Electric",
 		"course": 15000,
 		"images": [
-			"https://example.com/images/dodge-ram-front.jpg",
-			"https://example.com/images/dodge-ram-side.jpg",
-			"https://example.com/images/dodge-ram-back.jpg"
-		]
+			"https://example.com/images/tesla-model3-front.jpg",
+			"https://example.com/images/tesla-model3-side.jpg",
+			"https://example.com/images/tesla-model3-back.jpg"
+		],
+		"description": "Tesla Model 3 First generation (2019) - This Tesla Model 3 is a sleek and modern electric car that is perfect for anyone who wants a car that is both practical and stylish. It has only 15,000 miles on the odometer, so it is practically new, and it is equipped with an efficient electric motor that provides plenty of power. The Model 3 has a spacious and luxurious interior with comfortable seats, and it comes with a variety of features to make your driving experience more enjoyable. It also has a modern exterior design that is sure to turn heads. If you're in the market for an electric car, then this Tesla Model 3 is definitely worth considering."
 	}
 ]

@@ -7,10 +7,11 @@ import MaterialUISelect from '@mui/material/Select'
 
 type SelectProps = {
 	id: string
+	label: string
 	options: Array<string>
 }
 
-const Select: React.FC<SelectProps> = ({ id, options = [] }) => {
+const Select: React.FC<SelectProps> = ({ id, label, options = [] }) => {
 	const [value, setValue] = React.useState('')
 
 	const handleChange = (event: SelectChangeEvent) => {
@@ -19,35 +20,9 @@ const Select: React.FC<SelectProps> = ({ id, options = [] }) => {
 
 	return (
 		<FormControl sx={{ width: '100%' }}>
-			<InputLabel id={id} sx={{ textTransform: 'capitalize' }}>
-				{id}
-			</InputLabel>
+			<InputLabel id={id}>{label}</InputLabel>
 
-			<MaterialUISelect
-				labelId={id}
-				id={id}
-				value={value}
-				label='Age'
-				onChange={handleChange}
-				sx={{
-					'& label.Mui-focused': {
-						color: '#818890',
-					},
-					'& .MuiInput-underline:after': {
-						borderBottomColor: '#84846b',
-					},
-					'& .MuiOutlinedInput-root': {
-						'& fieldset': {
-							borderColor: '#818890',
-						},
-						'&:hover fieldset': {
-							borderColor: '#818890',
-						},
-						'&.Mui-focused fieldset': {
-							borderColor: '#84846b',
-						},
-					},
-				}}>
+			<MaterialUISelect labelId={id} id={id} value={value} label={label} onChange={handleChange}>
 				<MenuItem value=''>
 					<em>None</em>
 				</MenuItem>

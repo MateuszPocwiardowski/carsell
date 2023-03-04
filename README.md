@@ -15,7 +15,7 @@ All commands you can run from the root folder (using command prompt):
 
 ## Live
 
-https://mp-myownpage.netlify.app/
+https://carsell.vercel.app/
 
 ## Tech-stack
 
