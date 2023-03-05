@@ -14,8 +14,7 @@ type InputProps = {
 }
 
 const Input: React.FC<InputProps> = ({ id, label, type, onChange, sx, ...props }): JSX.Element => {
-	const initialValue = type === 'number' ? null : ''
-	const [value, setValue] = React.useState(initialValue)
+	const [value, setValue] = React.useState('')
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue(event.target.value)

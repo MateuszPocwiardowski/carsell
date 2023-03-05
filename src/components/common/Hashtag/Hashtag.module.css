@@ -1,0 +1,5 @@
+.hashtag {
+	border: 1px solid var(--color-gray-800);
+	border-radius: 2rem;
+    padding: .5rem 1rem;
+}

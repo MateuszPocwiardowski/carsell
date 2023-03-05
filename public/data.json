@@ -7,12 +7,12 @@
 		"generation": "XV50",
 		"price": 22000,
 		"year": 2018,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 30000,
 		"images": [
-			"https://example.com/images/toyota-camry-front.jpg",
-			"https://example.com/images/toyota-camry-side.jpg",
-			"https://example.com/images/toyota-camry-back.jpg"
+			"https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjJkdHAxZWpwdTZnbjEtT1RPTU9UT1BMIiwidyI6W3siZm4iOiJ3ZzRnbnFwNnkxZi1PVE9NT1RPUEwiLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.-OjuEHOy8-hA9MAdG3NKXzUOoPrih10be3jRy2TMm0U/image;s=1080x720",
+			"https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjR3ZXQ2NnQ3cnBjYzItT1RPTU9UT1BMIiwidyI6W3siZm4iOiJ3ZzRnbnFwNnkxZi1PVE9NT1RPUEwiLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.jZ3Z77yhPwHwKG9SEze8M6eQXiuOHSOtbYkQiDJPsXY/image;s=1080x720",
+			"https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImR4OXA5cXY5bjVxYzItT1RPTU9UT1BMIiwidyI6W3siZm4iOiJ3ZzRnbnFwNnkxZi1PVE9NT1RPUEwiLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.IR4-59CFjTCl-cgj61xWC7TfQMQs9vQFjCu2CMB4xio/image;s=1080x720"
 		],
 		"description": "Toyota Camry XV50 (2018) - This Toyota Camry is a reliable and affordable mid-size sedan that is perfect for daily driving. It is equipped with a fuel-efficient gasoline engine and has only 30,000 miles on the odometer, which means that it still has plenty of life left. The Camry has a spacious interior, comfortable seats, and plenty of features to make your driving experience more enjoyable. It also has a sleek and modern exterior design that is sure to turn heads. If you're looking for a reliable and affordable car that will last for years to come, then this Toyota Camry is a great option."
 	},
@@ -24,7 +24,7 @@
 		"generation": "Tenth generation",
 		"price": 12000,
 		"year": 2019,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 5000,
 		"images": [
 			"https://example.com/images/honda-cbr1000rr-front.jpg",
@@ -41,7 +41,7 @@
 		"generation": "Thirteenth generation",
 		"price": 38000,
 		"year": 2021,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 10000,
 		"images": [
 			"https://example.com/images/ford-f150-front.jpg",
@@ -58,7 +58,7 @@
 		"generation": "Tenth generation",
 		"price": 25000,
 		"year": 2020,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 8000,
 		"images": [
 			"https://example.com/images/honda-accord-front.jpg",
@@ -75,7 +75,7 @@
 		"generation": "Sixth generation",
 		"price": 11000,
 		"year": 2019,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 6000,
 		"images": [
 			"https://example.com/images/kawasaki-zx10r-front.jpg",
@@ -126,7 +126,7 @@
 		"generation": "Fourth generation",
 		"price": 45000,
 		"year": 2021,
-		"fuel_type": "Gasoline",
+		"fuel-type": "Gasoline",
 		"course": 12000,
 		"images": [
 			"https://example.com/images/chevrolet-silverado1500-front.jpg",
@@ -144,7 +144,7 @@
 		"generation": "First generation",
 		"price": 42000,
 		"year": 2019,
-		"fuel_type": "Electric",
+		"fuel-type": "Electric",
 		"course": 15000,
 		"images": [
 			"https://example.com/images/tesla-model3-front.jpg",

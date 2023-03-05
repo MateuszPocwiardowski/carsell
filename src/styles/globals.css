@@ -3,6 +3,7 @@
 :root {
 	--color-black: #000;
 	--color-white: #fff;
+	--color-red: #921515;
 	--color-gray-100: #f7f7f7;
 	--color-gray-200: #e6e9ee;
 	--color-gray-300: #dde0e4;
@@ -30,8 +31,8 @@
 	--font-size-xl: 2rem;
 	--font-size-xxl: 3rem;
 
-  --max-width: 1400px;
-  --center-content: 0 auto;
+	--max-width: 1400px;
+	--center-content: 0 auto;
 }
 
 * {
