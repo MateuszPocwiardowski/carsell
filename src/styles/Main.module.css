@@ -1,7 +1,18 @@
+.home {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 992px) {
+	.home {
+		flex-direction: row;
+	}
+}
+
 .container {
 	display: flex;
 	flex-direction: row;
-    justify-content: center;
+	justify-content: center;
 	flex-wrap: wrap;
 	max-width: fit-content;
 	gap: 1rem 2rem;

@@ -23,6 +23,7 @@ https://carsell.vercel.app/
 - Typescript 4
 - Material UI
 - CSS
+- MongoDB
 
 ## Screenshots
 

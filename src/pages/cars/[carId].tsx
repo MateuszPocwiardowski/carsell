@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Link from 'next/link'
+import { MongoClient, ObjectId } from 'mongodb'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Hashtag from '@Components/common/Hashtag/Hashtag'
@@ -8,7 +9,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 import 'swiper/css'
 import styles from '@Styles/Cars.module.css'
-import { describe } from 'node:test'
 
 type CarProps = {
 	category: 'cars' | 'motorcycles and scooters' | 'trucks'
@@ -119,31 +119,42 @@ const Car: React.FC<CarProps> = ({
 export default Car
 
 export const getStaticPaths: GetStaticPaths = async () => {
+	const client = await MongoClient.connect(
+		'mongodb+srv://mpocwiardowski:tnmLqEI56WyjzMJU@cluster0.vlusofg.mongodb.net/cars?retryWrites=true&w=majority'
+	)
+
+	const db = client.db()
+	const carsCollection = db.collection('cars')
+	const cars = await carsCollection.find().toArray()
+
+	client.close()
+
 	return {
+		paths: cars.map(car => ({
+			params: { carId: car?._id.toString() },
+		})),
 		fallback: false,
-		paths: [
-			{ params: { carId: '1' } },
-			{ params: { carId: '2' } },
-			{ params: { carId: '3' } },
-			{ params: { carId: '4' } },
-			{ params: { carId: '5' } },
-			{ params: { carId: '6' } },
-			{ params: { carId: '7' } },
-			{ params: { carId: '8' } },
-			{ params: { carId: '9' } },
-		],
 	}
 }
 
 export const getStaticProps: GetStaticProps = async context => {
-	const carId = context?.params?.carId
+	const client = await MongoClient.connect(
+		'mongodb+srv://mpocwiardowski:tnmLqEI56WyjzMJU@cluster0.vlusofg.mongodb.net/cars?retryWrites=true&w=majority'
+	)
 
-	const res = await fetch('http://localhost:3000/data.json')
-	const cars = await res.json()
+	const db = client.db()
+	const carsCollection = db.collection('cars')
 
-	const contentToDisplay = cars.find((car: any) => car?.id == carId)
+	const selectedId = context?.params?.carId as string
+	const selectedCar = await carsCollection.findOne({ _id: new ObjectId(selectedId) })
+
+	client.close()
 
 	return {
-		props: contentToDisplay,
+		props: {
+			...selectedCar,
+			_id: null,
+			id: selectedCar?._id.toString(),
+		},
 	}
 }

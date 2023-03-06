@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
+import { MongoClient } from 'mongodb'
 
 import Filters from '../components/Filters/Filters'
 
@@ -40,26 +41,28 @@ const Home: React.FC<homeProps> = ({ cars }) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<h2>Home page</h2>
-			<Filters />
-			<div className={styles.container}>
-				{cars.length > 0 &&
-					cars.map((car: any) => {
-						return (
-							<button
-								className={styles.car}
-								onClick={() => {
-									showMoreHandler({ id: car?.id })
-								}}>
-								<p>
-									{car?.brand} {car?.model}
-								</p>
-								<p>{car?.generation}</p>
-								<p>
-									{car?.price} PLN · {car?.year} · {car?.course}
-								</p>
-							</button>
-						)
-					})}
+			<div className={styles.home}>
+				<Filters />
+				<div className={styles.container}>
+					{cars.length > 0 &&
+						cars.map((car: any) => {
+							return (
+								<button
+									className={styles.car}
+									onClick={() => {
+										showMoreHandler({ id: car?.id })
+									}}>
+									<p>
+										{car?.brand} {car?.model}
+									</p>
+									<p>{car?.generation}</p>
+									<p>
+										{car?.price} PLN · {car?.year} · {car?.course}
+									</p>
+								</button>
+							)
+						})}
+				</div>
 			</div>
 		</React.Fragment>
 	)
@@ -68,10 +71,27 @@ const Home: React.FC<homeProps> = ({ cars }) => {
 export default Home
 
 export const getStaticProps: GetStaticProps = async context => {
-	const res = await fetch('http://localhost:3000/data.json')
-	const cars = await res.json()
+	const client = await MongoClient.connect(
+		'mongodb+srv://mpocwiardowski:tnmLqEI56WyjzMJU@cluster0.vlusofg.mongodb.net/cars?retryWrites=true&w=majority'
+	)
+
+	const db = client.db()
+	const carsCollection = db.collection('cars')
+	const cars = await carsCollection.find().toArray()
+
+	client.close()
 
 	return {
-		props: { cars },
+		props: {
+			cars: cars.map(car => ({
+				id: car?._id.toString(),
+				brand: car?.brand,
+				model: car?.model,
+				price: car?.price,
+				year: car?.year,
+				course: car?.course,
+			})),
+		},
+		revalidate: 1,
 	}
 }
