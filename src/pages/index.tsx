@@ -36,7 +36,10 @@ const Home: React.FC<homeProps> = ({ cars }) => {
 		<React.Fragment>
 			<Head>
 				<title>Carsell</title>
-				<meta name='description' content='Carsell' />
+				<meta
+					name='description'
+					content="Looking to sell your car quickly and hassle-free? Look no further than our car selling page. With a simple and easy process, you can get an instant quote for your car and sell it for a fair price. We'll take care of all the paperwork and provide a convenient pickup service, so you can sit back and relax while we handle everything. Don't let the stress of selling your car hold you back - sell with us today!"
+				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
@@ -48,6 +51,7 @@ const Home: React.FC<homeProps> = ({ cars }) => {
 						cars.map((car: any) => {
 							return (
 								<button
+									key={car?.id}
 									className={styles.car}
 									onClick={() => {
 										showMoreHandler({ id: car?.id })

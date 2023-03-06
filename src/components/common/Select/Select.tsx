@@ -28,7 +28,9 @@ const Select: React.FC<SelectProps> = ({ id, label, options = [] }) => {
 				</MenuItem>
 
 				{options.map(option => (
-					<MenuItem value={option}>{option}</MenuItem>
+					<MenuItem key={option} value={option}>
+						{option}
+					</MenuItem>
 				))}
 			</MaterialUISelect>
 		</FormControl>

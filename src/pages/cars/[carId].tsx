@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MongoClient, ObjectId } from 'mongodb'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -66,7 +67,7 @@ const Car: React.FC<CarProps> = ({
 					{images.length > 0 &&
 						images.map((image, index) => (
 							<SwiperSlide key={`${brand} ${model} ${index}`}>
-								<img className={styles.image} src={image} alt={`${brand} ${model} ${generation}`} />
+								<Image className={styles.image} src={image} alt={`${brand} ${model} ${generation}`} />
 							</SwiperSlide>
 						))}
 				</Swiper>
@@ -103,7 +104,7 @@ const Car: React.FC<CarProps> = ({
 			<div className={styles.details}>
 				<h5>Details</h5>
 				{hashtags.map(({ key, value, suffix }) => (
-					<p>
+					<p key={key}>
 						{key}: {value ? value : '-'} {suffix}
 					</p>
 				))}
