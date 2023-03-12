@@ -1,15 +1,16 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { MongoClient, ObjectId } from 'mongodb'
 
+import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Hashtag from '@Components/common/Hashtag/Hashtag'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
+import styles from '@Styles/Car.module.css'
 import 'swiper/css'
-import styles from '@Styles/Cars.module.css'
+import 'swiper/css/pagination'
 
 type CarProps = {
 	category: 'cars' | 'motorcycles and scooters' | 'trucks'
@@ -59,15 +60,17 @@ const Car: React.FC<CarProps> = ({
 
 			<div className={styles.container}>
 				<Swiper
+					modules={[Pagination]}
 					spaceBetween={0}
 					slidesPerView={1}
+					pagination={{ clickable: true }}
 					scrollbar={{ draggable: true }}
-					onSlideChange={() => {}}
-					onSwiper={() => {}}>
+					// @ts-ignore: next-line
+					style={{ '--swiper-navigation-color': '#fff', '--swiper-theme-color': '#fff' }}>
 					{images.length > 0 &&
 						images.map((image, index) => (
 							<SwiperSlide key={`${brand} ${model} ${index}`}>
-								<Image className={styles.image} src={image} alt={`${brand} ${model} ${generation}`} />
+								<img className={styles.image} src={image} alt={`${brand} ${model} ${generation}`} />
 							</SwiperSlide>
 						))}
 				</Swiper>
@@ -131,10 +134,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	client.close()
 
 	return {
+		fallback: 'blocking',
 		paths: cars.map(car => ({
 			params: { carId: car?._id.toString() },
 		})),
-		fallback: false,
 	}
 }
 

@@ -1,0 +1,57 @@
+.step {
+	display: flex;
+	justify-content: left;
+	align-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+.icon {
+	position: relative;
+	min-height: 60px;
+	min-width: 60px;
+	background-color: var(--color-gray-800);
+	border-radius: 50%;
+	padding: 1rem;
+}
+
+.icon::before,
+.icon::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	height: 2rem;
+	width: 4px;
+	background-color: var(--color-gray-400);
+	transform: translateX(-50%);
+}
+
+.icon::before {
+	top: -2rem;
+}
+
+.icon::after {
+	bottom: -2rem;
+}
+
+.step:first-child .icon::before {
+	background: linear-gradient(to top, var(--color-gray-400) 0%, transparent 100%);
+}
+
+.step:last-child .icon::after {
+	background: linear-gradient(to bottom, var(--color-gray-400) 0%, transparent 100%);
+}
+
+.icon svg {
+	font-size: var(--font-size-l);
+	color: var(--color-gray-200);
+}
+
+.text {
+	margin-left: 1rem;
+	text-align: left;
+}
+
+.title {
+	font-weight: var(--font-weight-medium);
+}

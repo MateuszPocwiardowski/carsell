@@ -1,37 +1,40 @@
 import React from 'react'
-import Head from 'next/head'
 import { GetStaticProps } from 'next'
-import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { MongoClient } from 'mongodb'
 
-import Filters from '../components/Filters/Filters'
+import Steps from '@Components/Steps/Steps'
+import Cars from '@Components/Cars/Cars'
+import Filters from '@Components/Filters/Filters'
 
 import styles from '@Styles/Main.module.css'
 
-type carsInterface = {
-	category: 'cars' | 'motorcycles and scooters' | 'trucks'
-	brand: string
-	model: string
-	generation: string
-	price: number
-	year: number
-	fuelType: number
-	course: number
-	images: Array<string>
-	description: string
+type CarsInterface = {
+	id: string
+	brand?: string
+	model?: string
+	generation?: string
+	fuelType?: string
+	engineCapacity?: number
+	price?: number
+	year?: number
+	course?: number
 }
 
-type homeProps = {
-	cars: Array<carsInterface>
+type FiltersInteface = {
+	categories: Array<string>
+	brands: Array<string>
+	models: Array<string>
+	generations: Array<string>
+	fuelTypes: Array<string>
 }
 
-const Home: React.FC<homeProps> = ({ cars }) => {
-	const router = useRouter()
+type CarsProps = {
+	cars: Array<CarsInterface>
+	filters: FiltersInteface
+}
 
-	const showMoreHandler = ({ id }: { id: number }) => {
-		router.push('/cars/' + id)
-	}
-
+const Home: React.FC<CarsProps> = ({ cars, filters }) => {
 	return (
 		<React.Fragment>
 			<Head>
@@ -43,30 +46,10 @@ const Home: React.FC<homeProps> = ({ cars }) => {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<h2>Home page</h2>
 			<div className={styles.home}>
-				<Filters />
-				<div className={styles.container}>
-					{cars.length > 0 &&
-						cars.map((car: any) => {
-							return (
-								<button
-									key={car?.id}
-									className={styles.car}
-									onClick={() => {
-										showMoreHandler({ id: car?.id })
-									}}>
-									<p>
-										{car?.brand} {car?.model}
-									</p>
-									<p>{car?.generation}</p>
-									<p>
-										{car?.price} PLN · {car?.year} · {car?.course}
-									</p>
-								</button>
-							)
-						})}
-				</div>
+				<Steps />
+				<Filters filters={filters} />
+				<Cars cars={cars} />
 			</div>
 		</React.Fragment>
 	)
@@ -88,13 +71,24 @@ export const getStaticProps: GetStaticProps = async context => {
 	return {
 		props: {
 			cars: cars.map(car => ({
-				id: car?._id.toString(),
-				brand: car?.brand,
-				model: car?.model,
-				price: car?.price,
-				year: car?.year,
-				course: car?.course,
+				id: car._id.toString(),
+				brand: car?.brand ?? '',
+				model: car?.model ?? '',
+				generation: car?.generation ?? '',
+				engineCapacity: car?.engineCapacity ?? 0,
+				fuelType: car?.fuelType ?? '',
+				price: car?.price ?? 0,
+				year: car?.year ?? 0,
+				course: car?.course ?? 0,
+				images: car?.images ?? [],
 			})),
+			filters: {
+				categories: cars.map(car => car?.category).filter((value, index, self) => self.indexOf(value) === index),
+				brands: cars.map(car => car?.brand).filter((value, index, self) => self.indexOf(value) === index),
+				models: cars.map(car => car?.model).filter((value, index, self) => self.indexOf(value) === index),
+				generations: cars.map(car => car?.generation).filter((value, index, self) => self.indexOf(value) === index),
+				fuelTypes: cars.map(car => car?.fuelType).filter((value, index, self) => self.indexOf(value) === index),
+			},
 		},
 		revalidate: 1,
 	}

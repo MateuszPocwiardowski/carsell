@@ -13,8 +13,9 @@
 	--color-gray-700: #3a3d4a;
 	--color-gray-800: #2e3039;
 	--color-gray-900: #1f2028;
-	--color-green-300: #84846b;
-	--color-green-600: #6b6b55;
+	--color-blue-300: #00ccff;
+	--color-blue-600: #0044cc;
+	--color-blue-900: #002266;
 
 	--font-main: 'Roboto', sans-serif;
 
@@ -42,7 +43,7 @@
 }
 
 body {
-	background-color: var(--color-gray-300);
+	background-color: var(--color-gray-200);
 	font-family: var(--font-main);
 	font-size: var(--font-size-s);
 	font-weight: var(--font-weight-normal);

@@ -9,11 +9,12 @@ type InputProps = {
 	defaultValue?: string
 	autoComplete?: string
 	helperText?: string
+	variant?: 'outlined' | 'standard'
 	sx?: SxProps<Theme>
 	onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
 }
 
-const Input: React.FC<InputProps> = ({ id, label, type, onChange, sx, ...props }): JSX.Element => {
+const Input: React.FC<InputProps> = ({ id, label, type, variant, onChange, sx, ...props }): JSX.Element => {
 	const [value, setValue] = React.useState('')
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +22,16 @@ const Input: React.FC<InputProps> = ({ id, label, type, onChange, sx, ...props }
 	}
 
 	return (
-		<MaterialUiInput id={id} label={label} type={type} value={value} name={id} onChange={handleChange} {...props} />
+		<MaterialUiInput
+			id={id}
+			name={id}
+			label={label}
+			type={type}
+			value={value}
+			variant={variant ? variant : 'outlined'}
+			onChange={handleChange}
+			{...props}
+		/>
 	)
 }
 

@@ -1,0 +1,30 @@
+.divider {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.divider svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 50px;
+}
+
+.divider .fill {
+	fill: var(--color-blue-900);
+}
+
+@media (max-width: 767px) {
+	.divider svg {
+		width: calc(191% + 1.3px);
+		height: 39px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.divider svg {
+		width: calc(149% + 1.3px);
+		height: 50px;
+	}
+}

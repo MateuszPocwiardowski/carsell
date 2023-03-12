@@ -1,0 +1,15 @@
+.cards {
+	width: 100%;
+	max-width: 432px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+
+@media (min-width: 992px) {
+	.cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}

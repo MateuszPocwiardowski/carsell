@@ -17,6 +17,13 @@
 	max-width: 100%;
 }
 
+@media (min-width: 792px) {
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}
+
 .image {
 	width: 100%;
 	height: auto;
@@ -67,4 +74,10 @@
 	font-weight: var(--font-weight-bold);
 	font-size: var(--font-size-m);
 	margin-bottom: 0.5rem;
+}
+
+.image-swiper-button-next,
+.image-swiper-button-prev {
+	content: 'next';
+	color: var(--color-white);
 }
