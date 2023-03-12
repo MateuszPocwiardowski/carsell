@@ -49,7 +49,7 @@ const Steps = () => {
 			<h5 className={styles.title}>Only 5 steps left to buy a new car!</h5>
 			<div className={styles.steps}>
 				{STEPS.map(({ icon, title, subtitle }: StepProps) => (
-					<Step icon={icon} title={title} subtitle={subtitle} />
+					<Step key={title} icon={icon} title={title} subtitle={subtitle} />
 				))}
 			</div>
 		</section>
